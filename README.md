@@ -1,6 +1,8 @@
 Backbone.js Authentication UI with Ruby on Rails and Devise
 ===========================================================
 
+![Backbone Devise Screenshot](https://github.com/jhuckabee/backbone_devise/raw/master/doc/backbone_devise_screenshot.png)
+
 This is an example application that implements a user regisration, authentication, and password retrieval
 user interface using [Backbone.js](http://documentcloud.github.com/backbone/), [Ruby on Rails](http://rubyonrails.org/), and [Devise](https://github.com/plataformatec/devise).
 
