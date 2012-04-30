@@ -1,0 +1,29 @@
+@import "variables";
+@import "bootstrap";
+
+body {
+  padding-top: 50px;
+  background: $grayLightest;
+}
+
+@import "bootstrap-responsive";
+
+#unauthenticated-view-container {
+  margin-top: 15px;
+  padding: 20px;
+  background: $white;
+  border: 1px solid lighten($grayLight, 5%);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow:0 0 5px $grayLight;
+  -moz-box-shadow:0 0 5px $grayLight;
+  box-shadow:0 0 5px $grayLight;
+
+  form {
+    margin-bottom: 0px;
+    .form-actions {
+      margin-bottom: 0px;
+    }
+  }
+}

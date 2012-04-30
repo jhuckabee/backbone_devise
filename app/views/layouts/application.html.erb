@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Backbone-Devise</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container" id="main">
+    <div id="loading">Loading...</div>
+  </div>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript">
+    <% if signed_in? -%>
+      BD.currentUser = new BD.Models.User(<%= current_user.to_json.html_safe %>);
+    <% else -%>
+      BD.currentUser = null;
+    <% end -%>
+    BD.start();
+  </script>
+</body>
+</html>

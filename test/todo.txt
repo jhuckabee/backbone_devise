@@ -1,0 +1,8 @@
+* User should only be able to modify repository meta data for repositories that they own (consider defining this with CanCan)
+  * Define ownership ???
+* Repository owners should be able to add/modify repository collaborators
+* Repository owners and collaborators should be able to upload, view, and edit documents within a repository
+* Users should be able to move documents between repositories
+* Users should be able to tag documents
+* System should automatically OCR uploads and store extracted text with document. Start with support for pdf, jpg, png, and tif
+* System users should have an email address that imports emails and their attachments into a default repository
