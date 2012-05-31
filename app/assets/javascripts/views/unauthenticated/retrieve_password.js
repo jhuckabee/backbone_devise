@@ -24,6 +24,7 @@ BD.Views.Unauthenticated.RetrievePassword = Backbone.Marionette.ItemView.extend(
 
     el.find('input.btn-primary').button('loading');
     el.find('.alert-error').remove();
+    el.find('.alert-success').remove();
 
     this.model.save(this.model.attributes, {
       success: function(userSession, response) {
