@@ -7,9 +7,13 @@ BD.Views.Unauthenticated.Signup = Backbone.Marionette.ItemView.extend({
     'submit form': 'signup'
   },
 
-  onRender: function() {
+  initialize: function() {
     this.model = new BD.Models.UserRegistration();
-    Backbone.ModelBinding.bind(this);
+    this.modelBinder = new Backbone.ModelBinder();
+  },
+
+  onRender: function() {
+    this.modelBinder.bind(this.model, this.el);
   },
 
   signup: function(e) {

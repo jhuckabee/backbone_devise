@@ -9,7 +9,7 @@ user interface using [Backbone.js](http://documentcloud.github.com/backbone/), [
 The front end also takes advantage of a few additional Backbone support libraries which include:
 
 * [backbone.marionette](https://github.com/derickbailey/backbone.marionette)
-* [backbone.modelBinding](https://github.com/derickbailey/backbone.modelbinding)
+* [backbone.modelbinder](https://github.com/theironcook/Backbone.ModelBinder)
 * [backbone-rails's Backbone.sync implementation](https://github.com/codebrew/backbone-rails)
 
 Demo Application

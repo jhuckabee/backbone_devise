@@ -26,7 +26,7 @@ class LoginSignupPasswordResetTest < ActionDispatch::IntegrationTest
         assert page.has_selector?('form#login-form div.alert-error')
       end
 
-      should 'shows logged in home page when login succeeds' do
+      should 'show logged in home page when login succeeds' do
         user = FactoryGirl.create(:user)
         visit root_path
         within('#login-form') do
@@ -41,7 +41,7 @@ class LoginSignupPasswordResetTest < ActionDispatch::IntegrationTest
 
     # Registrations
     context 'Signing up' do
-      should 'shows logged in home page when signup succeeds' do
+      should 'show logged in home page when signup succeeds' do
         visit root_path
         click_link 'Sign up'
         wait_until { page.has_selector?('#signup-form', :visible => true) }
@@ -56,7 +56,7 @@ class LoginSignupPasswordResetTest < ActionDispatch::IntegrationTest
         assert page.has_selector?('a[href="'+  destroy_user_session_path + '"]')
       end
 
-      should 'shows error message when signup fails' do
+      should 'show an error message when signup fails' do
         visit root_path
         click_link 'Sign up'
         wait_until { page.has_selector?('#signup-form', :visible => true) }
@@ -72,7 +72,7 @@ class LoginSignupPasswordResetTest < ActionDispatch::IntegrationTest
 
     # Password reset
     context 'Resetting your password' do
-      should 'shows success message when reset submission succeeds' do
+      should 'show success message when reset submission succeeds' do
         user = FactoryGirl.create(:user)
         visit root_path
         click_link 'Retrieve password'
@@ -81,8 +81,8 @@ class LoginSignupPasswordResetTest < ActionDispatch::IntegrationTest
           fill_in 'email', :with => user.email
         end
         click_button 'Send me password reset instructions'
-        assert_equal '/', page.current_path
-        assert page.has_selector?('form#retrieve-password-form div.alert-success')
+        assert_equal '/', page.current_path, "Current path not correct"
+        assert page.has_selector?('form#retrieve-password-form div.alert-success'), "No success message found"
       end
 
       should 'show an error message when reset fails' do

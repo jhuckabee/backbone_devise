@@ -7,9 +7,13 @@ BD.Views.Unauthenticated.Login = Backbone.Marionette.ItemView.extend({
     'submit form': 'login'
   },
 
-  onRender: function() {
+  initialize: function() {
     this.model = new BD.Models.UserSession();
-    Backbone.ModelBinding.bind(this);
+    this.modelBinder = new Backbone.ModelBinder();
+  },
+
+  onRender: function() {
+    this.modelBinder.bind(this.model, this.el);
   },
 
   login: function(e) {

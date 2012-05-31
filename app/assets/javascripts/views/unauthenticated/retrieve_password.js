@@ -7,9 +7,13 @@ BD.Views.Unauthenticated.RetrievePassword = Backbone.Marionette.ItemView.extend(
     'submit form': 'retrievePassword'
   },
 
-  onRender: function() {
+  initialize: function() {
     this.model = new BD.Models.UserPasswordRecovery();
-    Backbone.ModelBinding.bind(this);
+    this.modelBinder = new Backbone.ModelBinder();
+  },
+
+  onRender: function() {
+    this.modelBinder.bind(this.model, this.el);
   },
 
   retrievePassword: function(e) {

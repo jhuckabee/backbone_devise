@@ -11,7 +11,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: mydocs_development
+  database: backbone_devise_development
   pool: 5
   username: joshhuckabee
   password:
@@ -22,7 +22,7 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: mydocs_test
+  database: backbone_devise_test
   pool: 5
   username: joshhuckabee
   password:
@@ -30,7 +30,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: mydocs_production
+  database: backbone_devise_production
   pool: 5
   username: joshhuckabee
   password:

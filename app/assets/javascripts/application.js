@@ -15,7 +15,7 @@
 //= require underscore.string
 //= require backbone
 //= require backbone.sync.rails
-//= require backbone.modelbinding
+//= require backbone.modelbinder
 //= require backbone.marionette
 //= require bootstrap
 //= require handlebars.js
