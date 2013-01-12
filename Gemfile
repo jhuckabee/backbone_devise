@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                          '3.2.3'
+gem 'rails',                          '3.2.11'
 gem 'pg',                             '0.13.2'
 gem 'jquery-rails',                   '2.0.2'
 gem 'jbuilder',                       '0.4.0'
